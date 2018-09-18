@@ -7,6 +7,20 @@
 ** NOPAT---EBIAT
 ** EVA
 
+#+begin_src C :includes <stdio.h> :exports both
+  double NOPAT = 1448;
+  double Capital = 9679; /*Capital employed in the business or operation, how does this differ from total assets?*/
+  double RONA = NOPAT / Capital; //return on net assets
+  double WACC = 0.1272;
+  double EVA = (RONA - WACC) * Capital;
+  printf("The Economic Value Added is $%.2f\n", EVA);
+#+end_src
+
+#+results:
+: The Economic Value Added is $216.83
+
+
+
 * Homework/Discussion Questions
 
 

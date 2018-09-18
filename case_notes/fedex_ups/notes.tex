@@ -1,0 +1,61 @@
+% Created 2018-09-17 Mon 20:25
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Matt Brigida, Ph.D.}
+\date{\today}
+\title{Case Notes and Questions}
+\hypersetup{
+ pdfauthor={Matt Brigida, Ph.D.},
+ pdftitle={Case Notes and Questions},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.2.2 (Org mode 9.1.4)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+
+\section{Concepts to Review/Highlight:}
+\label{sec:org7127c49}
+\subsection{Financial Ratios}
+\label{sec:orgeccc60d}
+\subsection{NOPAT---EBIAT}
+\label{sec:org89f6bc4}
+\subsection{EVA}
+\label{sec:org36ee537}
+
+\begin{verbatim}
+double NOPAT = 1448;
+double Capital = 9679; /*Capital employed in the business or operation, how does this differ from total assets?*/
+double RONA = NOPAT / Capital; //return on net assets
+double WACC = 0.1272;
+double EVA = (RONA - WACC) * Capital;
+printf("The Economic Value Added is $%.2f\n", EVA);
+\end{verbatim}
+
+\begin{verbatim}
+The Economic Value Added is $216.83
+\end{verbatim}
+
+
+
+\section{Homework/Discussion Questions}
+\label{sec:org584a689}
+
+
+\section{Case Question}
+\label{sec:org8ce2b7a}
+\end{document}
