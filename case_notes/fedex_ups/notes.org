@@ -19,11 +19,25 @@
 #+results:
 : The Economic Value Added is $216.83
 
+** WACC
+
+$WACC = w_e r_e + w_d r_d (1 - \tau)$
+
+where $w_e$ and $w_d$ is the weight of equity and debt, respectively in the capital structure.  $r_e$ and $r_d$ are the required returns on equity and debt, and $\tau$ is the tax rate.
+
+We can get $r_e$ from the CAPM: $r_e = r_f + \beta_e (r_m - r_f)$ 
 
 
-* Homework/Discussion Questions
+* Case and Discussion Questions
+
+1. Have FedEx and UPS achieved their stated goals?
+   + Fedex's goal: "superior financial returns".
+   + UPS's goal: "long-term competitive return".
+2. Can strong performance be expected in the future?
+3. What has been the effect of the intense competition between the firms?
+4. Which firm would you say is performing "better", and how might we define better?
 
 
-* Case Question
+
 
 
