@@ -30,7 +30,32 @@ $WACC = w_e r_e + w_d r_d (1 - \tau)$
 
 where $w_e$ and $w_d$ is the weight of equity and debt, respectively in the capital structure.  $r_e$ and $r_d$ are the required returns on equity and debt, and $\tau$ is the tax rate.
 
-We can get $r_e$ from the CAPM: $r_e = r_f + \beta_e (r_m - r_f)$ 
+*** Cost of Debt
+
+We get the cost of debt by observing the yield-to-maturity on the firm's outstanding debt.  If the debt is not traded, we may have to find similar debt that is traded.  
+
+*** Cost of Equity
+
+We can get $r_e$ from the CAPM: $r_e = r_f + \beta_e (r_m - r_f)$  Using a python class and method to calculate the return on equity.
+
+#+begin_src python :exports both :results output
+class CAPMdata:
+     """a data structure to hold capm data"""
+     def __init__(self, risk_free, beta, return_market):
+         self.rf = risk_free
+         self.b = beta
+         self.rm = return_market
+
+     def capm(self):
+         return self.rf + self.b * (self.rm - self.rf)
+
+print("This required return on equity is {0:.2%}".format(CAPMdata(.03, 1.5, .08).capm()))
+#+end_src
+
+#+results:
+: This required return on equity is 10.50%
+
+*** Putting it together to calculate the WACC
 
 #+begin_src C :includes <stdio.h> :exports both
 double capm(double rf, double beta, double rm){
@@ -57,24 +82,6 @@ double tax = .4;
 #+results:
 : The WACC is 5.64%
 
-Using a python class and method to calculate the return on equity.
-
-#+begin_src python :exports both :results output
-class CAPMdata:
-     """a data structure to hold capm data"""
-     def __init__(self, risk_free, beta, return_market):
-         self.rf = risk_free
-         self.b = beta
-         self.rm = return_market
-
-     def capm(self):
-         return self.rf + self.b * (self.rm - self.rf)
-
-print("This required return on equity is {0:.2%}".format(CAPMdata(.03, 1.5, .08).capm()))
-#+end_src
-
-#+results:
-: This required return on equity is 10.50%
 
 
 * Case and Discussion Questions
