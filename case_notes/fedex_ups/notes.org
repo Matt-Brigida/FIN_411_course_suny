@@ -4,6 +4,11 @@
 
 * Concepts to Review/Highlight:
 ** Financial Ratios
+1.  Financial ratio values can be volatile. Don't pick out one ratio for one particular year and draw conclusions from it---it could be due to particular charges unique to that year.  Instead, look at the trend in the ratio over time and its relation over time to the same ratio at a similar firm.
+
+2.  Know what good values of the ratio is.
+
+3.  Many different ratios measure the same thing, so don't spend time analyzing each.  For example, we can see that Fedex's debt to equity ratio is declining.  Given this we would *expect* its Time-Interest-Earned ratio to increase, which it does.  So there is no need to discuss both ratios.  It is possible, though rare, that the Time-Interest-Earned ratio may not increase.  If this were the case then discussing why would be relevant.  
 ** NOPAT---EBIAT
 ** EVA
 
@@ -26,6 +31,50 @@ $WACC = w_e r_e + w_d r_d (1 - \tau)$
 where $w_e$ and $w_d$ is the weight of equity and debt, respectively in the capital structure.  $r_e$ and $r_d$ are the required returns on equity and debt, and $\tau$ is the tax rate.
 
 We can get $r_e$ from the CAPM: $r_e = r_f + \beta_e (r_m - r_f)$ 
+
+#+begin_src C :includes <stdio.h> :exports both
+double capm(double rf, double beta, double rm){
+return rf + beta * (rm - rf);
+}
+
+double wacc(double wd, double we, double re, double rd, double tax){
+return we * re + wd * rd * (1 - tax);
+}
+
+int main(){
+
+double wd = .4;
+double rd = .05;
+double we = 1 - wd;
+double re = capm(.02, 1.5, .08);
+double tax = .4;
+
+  printf("The WACC is %.2f\%\n", 100 * wacc(wd, we, rd, re, tax));
+}
+
+#+end_src
+
+#+results:
+: The WACC is 5.64%
+
+Using a python class and method to calculate the return on equity.
+
+#+begin_src python :exports both :results output
+class CAPMdata:
+     """a data structure to hold capm data"""
+     def __init__(self, risk_free, beta, return_market):
+         self.rf = risk_free
+         self.b = beta
+         self.rm = return_market
+
+     def capm(self):
+         return self.rf + self.b * (self.rm - self.rf)
+
+print("This required return on equity is {0:.2%}".format(CAPMdata(.03, 1.5, .08).capm()))
+#+end_src
+
+#+results:
+: This required return on equity is 10.50%
 
 
 * Case and Discussion Questions
