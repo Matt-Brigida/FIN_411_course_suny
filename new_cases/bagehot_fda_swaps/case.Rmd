@@ -1,0 +1,9 @@
+---
+title:  FDA Swaps and Market Failure
+author:  Matt Brigida, Ph.D.
+output: html_document
+---
+
+## Directions
+
+Read 'The Only Game in Town' and then the paper on FDA Swaps. 
