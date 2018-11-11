@@ -6,4 +6,8 @@ output: html_document
 
 ## Directions
 
-Read 'The Only Game in Town' and then the paper on FDA Swaps. 
+Read 'The Only Game in Town' and then the paper on FDA Swaps. Given what you learn about information asymmetry and the role of the bod/ask spread:
+
+#. Explain the difficulty in creating a market for FDA Swaps.
+#. Do you think the market is viable?
+#. How could you give the market a better chance of working---can you reduce the information asymmetry?
