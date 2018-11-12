@@ -6,8 +6,10 @@ output: html_document
 
 ## Directions
 
-Read 'The Only Game in Town' and then the paper on FDA Swaps. Given what you learn about information asymmetry and the role of the bod/ask spread:
+Read 'The Only Game in Town' and then the paper on FDA Swaps. Given what you learn about information asymmetry and the role of the bid/ask spread:
 
+#. Given what we have learned from 'The Only Game in Town', if you trade randomly will you lose money?  If so, where will that money go?
+#. What is the problem the FDA Swaps paper is trying to solve?  
 #. Explain the difficulty in creating a market for FDA Swaps.
 #. Do you think the market is viable?
 #. How could you give the market a better chance of working---can you reduce the information asymmetry?
