@@ -13,3 +13,8 @@ Read 'The Only Game in Town' and then the paper on FDA Swaps. Given what you lea
 #. Explain the difficulty in creating a market for FDA Swaps.
 #. Do you think the market is viable?
 #. How could you give the market a better chance of working---can you reduce the information asymmetry?
+
+## Kyle's Lambda
+
+See [this presentation](https://matt-brigida.github.io/fin_532_market_depth/), and calculate and interpret Kyle's Lambda for the asset I give you. 
+
