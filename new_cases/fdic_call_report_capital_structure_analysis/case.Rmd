@@ -1,0 +1,23 @@
+---
+title: "Bank Capital Structure and Lending"
+author:  Matt Brigida, Ph.D.
+output: html_document
+---
+
+# Background
+
+If a bank's Tier 1 Leverage Ratio (Tier 1 Capital divided by Total Assets) falls below 5%, corrective action may be requested by the bank's regulator.  However, equity capital tends to be more costly than debt, and so bank's generally do not want leverage ratios to be too high. In this analysis we'll test or the effect of leverage ratio on sources of bank income.  Do higher leverage ratios cause banks to seek out riskier forms of income? 
+
+# Data
+
+We'll use data from [FDIC Call Reports](https://cdr.ffiec.gov/public/).  I have pulled the data from the FDIC, stored them in compressed files, and written access function [in this GitHub repo](https://github.com/Matt-Brigida/FFIEC_Call_Reports).
+
+I'll create panel data sets for you to easily download and analyze.  You will likely want to use R/RStudio.
+
+# Analysis
+
+We'll use fixed-effects panel data models.  You won't have to worry too much about the econometrics; you can just pick which varibles you want.
+
+# Conclusions
+
+Does bank capital levels seem to have any effect on revenue?
