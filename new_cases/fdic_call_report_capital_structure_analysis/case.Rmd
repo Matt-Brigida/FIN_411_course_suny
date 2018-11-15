@@ -20,4 +20,4 @@ We'll use fixed-effects panel data models.  You won't have to worry too much abo
 
 # Conclusions
 
-Does bank capital levels seem to have any effect on revenue?
+Does bank capital levels seem to have any effect on revenue sources?
