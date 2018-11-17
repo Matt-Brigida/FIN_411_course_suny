@@ -1,0 +1,13 @@
+---
+title: "Getting to Know the Data"
+author: "Matt Brigida, Ph.D."
+output: html_document
+---
+
+# Summary Statistics
+
+First we'll create some tables of summary statistics to get a better understanding of our data set.  Questions we would like to answer are:
+
+#. What is the capital structure of the average and median bank?
+#. Is this capital structure affected by bank size, location?  Does it change over time?
+#. 
