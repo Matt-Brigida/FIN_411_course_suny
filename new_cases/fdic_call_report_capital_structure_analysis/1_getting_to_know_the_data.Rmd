@@ -8,6 +8,18 @@ output: html_document
 
 First we'll create some tables of summary statistics to get a better understanding of our data set.  Questions we would like to answer are:
 
+For now:
+
 #. What is the capital structure of the average and median bank?
-#. Is this capital structure affected by bank size, location?  Does it change over time?
-#. 
+#. What is the average proportion of loans of a given type (consumer, C&I, real-estate)---as a percent of assets? 
+#. Is bank capital structure different for young firms?
+#. Do young firms focus on one type of loan?
+#. Were capital structures different during/after the financial crisis?
+#. What are the general characteristics of the average and median bank, i.e. ROA, NPAs
+
+For later:
+
+#. Is this capital structure affected by bank size?  Does it change over time?  Is it affected by firm/managerial characteristics such as ROA?
+#. Are these loan proportions affected by the bank's capital structure?
+
+I can build more panels with any data you wish from the Call Report.  Do you think there are other factors which may affect loans or capital structure?
