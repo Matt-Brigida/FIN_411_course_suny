@@ -1,0 +1,13 @@
+---
+title:  "Lease Option Valuation"
+author:  Matt Brigida, Ph.D.
+output: html_document
+---
+
+## Directions
+
+Read 'The Option in Auto Leases'. Given what you learn about information asymmetry and the role of the bid/ask spread:
+
+#. Does the option reduce or increase the value of the lease to the lessor?
+
+
