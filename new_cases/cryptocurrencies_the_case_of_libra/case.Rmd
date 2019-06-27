@@ -1,0 +1,21 @@
+---
+title: "The Promise of Cryptocurrencies and the Case of Libra"
+author:  Matt Brigida, Ph.D.
+output: html_document
+---
+
+# Background
+
+
+
+# Data
+
+
+
+# Analysis
+
+
+
+
+
+
