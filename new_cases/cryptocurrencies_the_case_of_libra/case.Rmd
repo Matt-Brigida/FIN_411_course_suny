@@ -6,7 +6,23 @@ output: html_document
 
 # Background
 
+A currency serves two purposes, it is a (1) medium of exchange, and (2) a store of value.  By medium of exchange we mean it must be accepted in order to buy goods and services.  If a currency cannot be used to buy anything, it has no usefullness (no value) to us.
 
+Present currencies are fiat or non-fiat.  Fiat currencies have value because, by law (fiat), they must be accepted as payment ("for all debt public and private").  Non-fiat currencies are backed by assets (gold, another currency, etc).
+
+*Definition*: Seniorage
+
+*Not often mentioned but accurate observation:* The use of a particular currency is largely a *political* decision.
+
+## Cryptocurrencies
+
+<!-- Insert link to summary about bitcoin and ethereum. -->
+
+## Libra
+
+<!-- there is a backup copy of the blockchain paper in the literature folder in case of dead link -->
+
+See the [Libra Blockchain](https://developers.libra.org/docs/assets/papers/the-libra-blockchain.pdf).
 
 # Data
 
@@ -14,7 +30,13 @@ output: html_document
 
 # Analysis
 
+#. What benefits to major cryptocurrencies have in common, i.e. what problems are they trying to solve?
 
+#. How does Libra treat the above problems?
+
+#. What new problems might Libra cause?
+
+#. Do you think Libra is likely to be implemented, and if it is what do you think will be the implications for payments?
 
 
 
