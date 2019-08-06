@@ -4,10 +4,21 @@ author:  Matt Brigida, Ph.D.
 output: html_document
 ---
 
-## Directions
+## Background
 
-Read 'The Option in Auto Leases'. Given what you learn about information asymmetry and the role of the bid/ask spread:
+An auto lease often gives the lessee the option to buy the automobile at the end of the lease.  Every time the lessee makes a payment he/she keeps the option alive.
 
-#. Does the option reduce or increase the value of the lease to the lessor?
+
+Read 'The Option in Auto Leases'.
+
+## Analysis
+
+#.  Does the option reduce or increase the value of the lease to the lessor?
+
+#.  What factors may increase the value of the lease?
+
+#.  What may cause many of these leases options are exercised?  What might this mean for the auto maker?  i.e. if used car prices are high, dows this have any correlation with sales of new cars?  The point is to get an idea between the exercise of the option and the auto maker's new car sales/lease revenue.
+
+#.  Conversely, if fewer than expected options are exercised, what does this mean for the new and used car markets, and for the macroeconomy?
 
 
