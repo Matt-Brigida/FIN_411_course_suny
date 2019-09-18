@@ -4,7 +4,8 @@
 * Topics
 
 ** Talk about LBOs.  Page 102 
-** After LBO KK becomes "debt-free".  KK IPOs in 2000, and then seeks to "aggressively" increase the number of stores.  Talk about the effect of aggressive expansion on the Balance sheet.  Discuss IGR and SGR. KK will ultimately use "external financing" be having franchisees.
+** After LBO KK becomes "debt-free".  KK IPOs in 2000, and then seeks to "aggressively" increase the number of stores.  Talk about the effect of aggressive expansion on the Balance sheet.  Discuss IGR and SGR. KK will ultimately use "external financing" through new franchisee fees.
+*** Was bad accounting merely a symptom of an overly aggressive expansion plan?
 ** Asymmetric Information, financial statements, and firm value
 ** What makes financial statements required?  Bond protective covenants, and stock market listing requirements and their implications if you don't file on time.
 *** Missing financial statements means debt can be called, which may cause default.
