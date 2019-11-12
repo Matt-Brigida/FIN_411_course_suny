@@ -1,0 +1,69 @@
+---
+title: "Technical and Fundamental FX Models"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Technical Analysis
+
+Past prices predict future prices.
+
+
+```{r message=FALSE, warning=FALSE,error=FALSE, results="hide"}
+library(quantmod)
+getSymbols(c("EXUSUK", "GBRCPIALLMINMEI", "GBRPROINDMISMEI", "CPIAUCSL", "INDPRO"), 
+    src = "FRED")
+```
+
+```{r message=FALSE, warning=FALSE,error=FALSE}
+chartSeries(EXUSUK)
+addBBands()
+addMACD()
+```
+
+```{r message=FALSE, warning=FALSE,error=FALSE, results="hide"}
+getSymbols("XOM")
+chartSeries(XOM)
+addAroonOsc()
+addZigZag()
+addSAR()
+```
+
+### Chinese Yuan and Brazilian Real
+
+```{r message=FALSE, warning=FALSE,error=FALSE, results="hide"}
+getSymbols(c("EXCHUS", "EXBZUS"), src = "FRED")
+chartSeries(EXCHUS)
+chartSeries(EXBZUS)
+```
+
+## Fundamental Analysis
+
+Past/present macro (or other data) can predict future prices.
+
+```{r message=FALSE, warning=FALSE,error=FALSE}
+date.ukcpi <- index(GBRCPIALLMINMEI)
+ukcpi <- as.numeric(GBRCPIALLMINMEI[, 1])
+ukcpi <- as.xts(ukcpi, order.by = date.ukcpi)
+
+fx.r <- Delt(EXUSUK)[-1]
+ukcpi.r <- Delt(ukcpi)[-1]
+uscpi.r <- Delt(CPIAUCSL)[-1]
+ukprod.r <- Delt(GBRPROINDMISMEI)[-1]
+usprod.r <- Delt(INDPRO)[-1]
+
+data <- merge(fx.r, ukcpi.r, uscpi.r, ukprod.r, usprod.r, join = "inner")
+names(data) <- c("fx.r", "ukcpi.r", "uscpi.r", "ukprod.r", "usprod.r")
+
+diff.cpi <- data$ukcpi.r - data$uscpi.r
+diff.prod <- data$ukprod.r - data$usprod.r
+
+reg1 <- lm(data$fx.r ~ diff.cpi + diff.prod)
+reg2 <- lm(data$fx.r[-1] ~ diff.cpi[-length(diff.cpi)] + diff.prod[-length(diff.prod)])
+```
+
+```{r message=FALSE, warning=FALSE,error=FALSE}
+summary(reg1)
+summary(reg2)
+```
