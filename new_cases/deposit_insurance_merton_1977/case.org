@@ -1,0 +1,40 @@
+#+title: Pricing Deposit Insurance
+#+options: toc:nil
+
+
+* Overview
+
+Merton (1977) used option pricing methods to value deposit insurance.
+
+
+* Deposit Insurance
+
+
+* Option Pricing Model
+
+
+
+
+* Data
+
+#+BEGIN_SRC python
+import pandas as pd
+
+data = read_
+
+
+#+END_SRC
+
+
+* Python Implementation
+
+Below is a function which will calculate the latest cost of deposit insurance for a given bank.
+
+#+BEGIN_SRC python
+def get_cost(idrssd):
+
+
+#+END_SRC
+
+
+Merton, R., 1977, 
