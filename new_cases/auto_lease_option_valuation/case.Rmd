@@ -8,7 +8,6 @@ output: html_document
 
 An auto lease often gives the lessee the option to buy the automobile at the end of the lease.  Every time the lessee makes a payment he/she keeps the option alive.
 
-
 Read 'The Option in Auto Leases'.
 
 ## Analysis
@@ -17,7 +16,7 @@ Read 'The Option in Auto Leases'.
 
 #.  What factors may increase the value of the lease?
 
-#.  What may cause many of these leases options are exercised?  What might this mean for the auto maker?  i.e. if used car prices are high, dows this have any correlation with sales of new cars?  The point is to get an idea between the exercise of the option and the auto maker's new car sales/lease revenue.
+#.  What may cause many of these leases options are exercised?  What might this mean for the auto maker?  i.e. if used car prices are high, does this have any correlation with sales of new cars?  The point is to get an idea between the exercise of the option and the auto maker's new car sales/lease revenue.
 
 #.  Conversely, if fewer than expected options are exercised, what does this mean for the new and used car markets, and for the macroeconomy?
 
