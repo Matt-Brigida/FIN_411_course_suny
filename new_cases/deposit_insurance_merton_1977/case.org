@@ -10,37 +10,55 @@ Merton (1977) used option pricing methods to value deposit insurance.
 
 * Deposit Insurance
 
+Banks deposits are insured by the Federal Deposit Insurance Corporation (FDIC).
 
 * Option Pricing Model
 
-
+Let $D$ and $A$ stand for the value of the bank's deposits and assets.  
 
 
 * Data
 
-#+BEGIN_SRC python :session sess :results output :cache yes :eval no
+
+Extract only Granville Bank. 
+
+#+BEGIN_SRC python :results output :cache yes :exports both
 import pandas as pd
 
 data = pd.read_csv("callreports_final.csv")
 
-data.head()
+data = data[data.rssdid == 560830]
+
+print(data.shape)
+print(data)
+#+END_SRC
+
+#+RESULTS[3f3ae5f4c2d7f5e7d441e5570bc464bf7cee68c5]:
+#+begin_example
+(152, 167)
+        rssdid  chartertype  ...  intincreloans  dividendoncommonstock
+804718  560830          200  ...            NaN                    NaN
+804719  560830          200  ...            NaN                    NaN
+804720  560830          200  ...            NaN                    NaN
+804721  560830          200  ...            NaN                    NaN
+804722  560830          200  ...            NaN                    NaN
+...        ...          ...  ...            ...                    ...
+804865  560830          200  ...          168.0                   17.0
+804866  560830          200  ...          157.0                   15.0
+804867  560830          200  ...          158.0                   15.0
+804868  560830          200  ...          157.0                   16.0
+804869  560830          200  ...          159.0                   16.0
+
+[152 rows x 167 columns]
+#+end_example
+
+
+#+BEGIN_SRC python :results output
+print("hello world")
 #+END_SRC
 
 #+RESULTS:
-#+begin_example
-Python 3.7.4 (default, Oct  4 2019, 06:57:26) 
-[GCC 9.2.0] on linux
-Type "help", "copyright", "credits" or "license" for more information.
->>> >>> >>> >>>    rssdid  chartertype   cert  bhcid      date  ... intexpfordep  intexpfedfundsrepoliab  intincpersloans  intincreloans  dividendoncommonstock
-0      28          200  26606    0.0  19860331  ...            0                     0.0              NaN            NaN                    NaN
-1      28          200  26606    0.0  19860630  ...            0                     0.0              NaN            NaN                    NaN
-2      28          200  26606    0.0  19860930  ...            0                     0.0              NaN            NaN                    NaN
-3      28          200  26606    0.0  19861231  ...            0                     0.0              NaN            NaN                    NaN
-4      28          200  26606    0.0  19870331  ...            0                     0.0              NaN            NaN                    NaN
-
-[5 rows x 167 columns]
-#+end_example
-
+: hello world
 
 * Python Implementation
 
