@@ -1,5 +1,6 @@
 #+title: Pricing Deposit Insurance
-#+options: toc:nil
+#+author: Matt Brigida
+#+SETUPFILE: https://fniessen.github.io/org-html-themes/setup/theme-readtheorg.setup
 
 
 * Overview
@@ -17,24 +18,52 @@ Merton (1977) used option pricing methods to value deposit insurance.
 
 * Data
 
-#+BEGIN_SRC python
+#+BEGIN_SRC python :session sess :results output :cache yes :eval no
 import pandas as pd
 
-data = read_
+data = pd.read_csv("callreports_final.csv")
 
-
+data.head()
 #+END_SRC
+
+#+RESULTS:
+#+begin_example
+Python 3.7.4 (default, Oct  4 2019, 06:57:26) 
+[GCC 9.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> >>> >>> >>>    rssdid  chartertype   cert  bhcid      date  ... intexpfordep  intexpfedfundsrepoliab  intincpersloans  intincreloans  dividendoncommonstock
+0      28          200  26606    0.0  19860331  ...            0                     0.0              NaN            NaN                    NaN
+1      28          200  26606    0.0  19860630  ...            0                     0.0              NaN            NaN                    NaN
+2      28          200  26606    0.0  19860930  ...            0                     0.0              NaN            NaN                    NaN
+3      28          200  26606    0.0  19861231  ...            0                     0.0              NaN            NaN                    NaN
+4      28          200  26606    0.0  19870331  ...            0                     0.0              NaN            NaN                    NaN
+
+[5 rows x 167 columns]
+#+end_example
 
 
 * Python Implementation
 
 Below is a function which will calculate the latest cost of deposit insurance for a given bank.
 
-#+BEGIN_SRC python
+#+BEGIN_SRC python :session sess :results output :eval no
 def get_cost(idrssd):
+
 
 
 #+END_SRC
 
 
-Merton, R., 1977, 
+
+* References
+
+@article{merton1977analytic,
+  title={An analytic derivation of the cost of deposit insurance and loan guarantees an application of modern option pricing theory},
+  author={Merton, Robert C},
+  journal={Journal of Banking \& Finance},
+  volume={1},
+  number={1},
+  pages={3--11},
+  year={1977},
+  publisher={Elsevier}
+}
