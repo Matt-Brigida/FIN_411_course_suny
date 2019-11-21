@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-11-20 Wed 14:58 -->
+<!-- 2019-11-21 Thu 16:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pricing Deposit Insurance</title>
@@ -262,19 +262,19 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge53386f">1. Overview</a></li>
-<li><a href="#org9ce55e9">2. Deposit Insurance</a></li>
-<li><a href="#orgf425ea1">3. Option Pricing Model</a></li>
-<li><a href="#orgc956499">4. Data</a></li>
-<li><a href="#orgbc808c9">5. Python Implementation</a></li>
-<li><a href="#org0ef6e79">6. References</a></li>
+<li><a href="#orgf631156">1. Overview</a></li>
+<li><a href="#org7ef218d">2. Deposit Insurance</a></li>
+<li><a href="#orgb1184f9">3. Option Pricing Model</a></li>
+<li><a href="#orgc8dc24a">4. Data</a></li>
+<li><a href="#org77167e4">5. Python Implementation</a></li>
+<li><a href="#org3b961aa">6. References</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orge53386f" class="outline-2">
-<h2 id="orge53386f"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-orgf631156" class="outline-2">
+<h2 id="orgf631156"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Merton (1977) used option pricing methods to value deposit insurance.
@@ -283,8 +283,8 @@ Merton (1977) used option pricing methods to value deposit insurance.
 </div>
 
 
-<div id="outline-container-org9ce55e9" class="outline-2">
-<h2 id="org9ce55e9"><span class="section-number-2">2</span> Deposit Insurance</h2>
+<div id="outline-container-org7ef218d" class="outline-2">
+<h2 id="org7ef218d"><span class="section-number-2">2</span> Deposit Insurance</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Banks deposits are insured by the Federal Deposit Insurance Corporation (FDIC).
@@ -292,18 +292,26 @@ Banks deposits are insured by the Federal Deposit Insurance Corporation (FDIC).
 </div>
 </div>
 
-<div id="outline-container-orgf425ea1" class="outline-2">
-<h2 id="orgf425ea1"><span class="section-number-2">3</span> Option Pricing Model</h2>
+<div id="outline-container-orgb1184f9" class="outline-2">
+<h2 id="orgb1184f9"><span class="section-number-2">3</span> Option Pricing Model</h2>
 <div class="outline-text-2" id="text-3">
 <p>
-Let \(D\) and \(A\) stand for the value of the bank's deposits and assets.  
+Let \(D\) and \(A\) stand for the value of the bank's deposits and assets.  Then the payment to the bank be the deposit insurer is \(max(D - V, 0)\).  That is, if the value of the banks assets are less than the deposits, then the insurer must pay:
+</p>
+
+<p>
+\[D - V\]
+</p>
+
+<p>
+However if the bank's assets exceed deposits then the insurer pays \$0.
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-orgc956499" class="outline-2">
-<h2 id="orgc956499"><span class="section-number-2">4</span> Data</h2>
+<div id="outline-container-orgc8dc24a" class="outline-2">
+<h2 id="orgc8dc24a"><span class="section-number-2">4</span> Data</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Extract only Granville Bank. 
@@ -347,8 +355,8 @@ Extract only Granville Bank.
 </div>
 </div>
 
-<div id="outline-container-orgbc808c9" class="outline-2">
-<h2 id="orgbc808c9"><span class="section-number-2">5</span> Python Implementation</h2>
+<div id="outline-container-org77167e4" class="outline-2">
+<h2 id="org77167e4"><span class="section-number-2">5</span> Python Implementation</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Below is a function which will calculate the latest cost of deposit insurance for a given bank.
@@ -356,6 +364,8 @@ Below is a function which will calculate the latest cost of deposit insurance fo
 
 <div class="org-src-container">
 <pre class="src src-python"><span style="color: #4f97d7; font-weight: bold;">def</span> <span style="color: #bc6ec5; font-weight: bold;">get_cost</span><span style="color: #4f97d7;">(</span>idrssd<span style="color: #4f97d7;">)</span>:
+<span style="background-color: #292e34;"> </span>   <span style="color: #9f8766;">"""calculate the value of deposit insurance for a given bank using the approach of Merton (1977)""""</span>
+<span style="color: #9f8766; background-color: #292e34;"> </span><span style="color: #9f8766;">   ## first calculate asset volatility </span>
 
 
 
@@ -366,8 +376,8 @@ Below is a function which will calculate the latest cost of deposit insurance fo
 
 
 
-<div id="outline-container-org0ef6e79" class="outline-2">
-<h2 id="org0ef6e79"><span class="section-number-2">6</span> References</h2>
+<div id="outline-container-org3b961aa" class="outline-2">
+<h2 id="org3b961aa"><span class="section-number-2">6</span> References</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 @article{merton1977analytic,
@@ -386,7 +396,7 @@ Below is a function which will calculate the latest cost of deposit insurance fo
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida</p>
-<p class="date">Created: 2019-11-20 Wed 14:58</p>
+<p class="date">Created: 2019-11-21 Thu 16:23</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
