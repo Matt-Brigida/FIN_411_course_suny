@@ -20,6 +20,11 @@ $$D - V$$
 
 However if the bank's assets exceed deposits then the insurer pays \$0.
 
+** Original Black-Scholes-Merton Model
+
+** Margrabe Spread Option Model
+
+
 
 * Data
 

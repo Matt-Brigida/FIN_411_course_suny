@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2019-11-21 Thu 16:23 -->
+<!-- 2019-12-03 Tue 12:30 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pricing Deposit Insurance</title>
@@ -262,19 +262,24 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf631156">1. Overview</a></li>
-<li><a href="#org7ef218d">2. Deposit Insurance</a></li>
-<li><a href="#orgb1184f9">3. Option Pricing Model</a></li>
-<li><a href="#orgc8dc24a">4. Data</a></li>
-<li><a href="#org77167e4">5. Python Implementation</a></li>
-<li><a href="#org3b961aa">6. References</a></li>
+<li><a href="#org67e034a">1. Overview</a></li>
+<li><a href="#org201a0f2">2. Deposit Insurance</a></li>
+<li><a href="#org3f89f23">3. Option Pricing Model</a>
+<ul>
+<li><a href="#org527d7bb">3.1. Original Black-Scholes-Merton Model</a></li>
+<li><a href="#orgdccc9ef">3.2. Margrabe Spread Option Model</a></li>
+</ul>
+</li>
+<li><a href="#org1fdf8cf">4. Data</a></li>
+<li><a href="#orga50ce05">5. Python Implementation</a></li>
+<li><a href="#org944a103">6. References</a></li>
 </ul>
 </div>
 </div>
 
 
-<div id="outline-container-orgf631156" class="outline-2">
-<h2 id="orgf631156"><span class="section-number-2">1</span> Overview</h2>
+<div id="outline-container-org67e034a" class="outline-2">
+<h2 id="org67e034a"><span class="section-number-2">1</span> Overview</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Merton (1977) used option pricing methods to value deposit insurance.
@@ -283,8 +288,8 @@ Merton (1977) used option pricing methods to value deposit insurance.
 </div>
 
 
-<div id="outline-container-org7ef218d" class="outline-2">
-<h2 id="org7ef218d"><span class="section-number-2">2</span> Deposit Insurance</h2>
+<div id="outline-container-org201a0f2" class="outline-2">
+<h2 id="org201a0f2"><span class="section-number-2">2</span> Deposit Insurance</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Banks deposits are insured by the Federal Deposit Insurance Corporation (FDIC).
@@ -292,8 +297,8 @@ Banks deposits are insured by the Federal Deposit Insurance Corporation (FDIC).
 </div>
 </div>
 
-<div id="outline-container-orgb1184f9" class="outline-2">
-<h2 id="orgb1184f9"><span class="section-number-2">3</span> Option Pricing Model</h2>
+<div id="outline-container-org3f89f23" class="outline-2">
+<h2 id="org3f89f23"><span class="section-number-2">3</span> Option Pricing Model</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Let \(D\) and \(A\) stand for the value of the bank's deposits and assets.  Then the payment to the bank be the deposit insurer is \(max(D - V, 0)\).  That is, if the value of the banks assets are less than the deposits, then the insurer must pay:
@@ -307,11 +312,20 @@ Let \(D\) and \(A\) stand for the value of the bank's deposits and assets.  Then
 However if the bank's assets exceed deposits then the insurer pays \$0.
 </p>
 </div>
+
+<div id="outline-container-org527d7bb" class="outline-3">
+<h3 id="org527d7bb"><span class="section-number-3">3.1</span> Original Black-Scholes-Merton Model</h3>
+</div>
+
+<div id="outline-container-orgdccc9ef" class="outline-3">
+<h3 id="orgdccc9ef"><span class="section-number-3">3.2</span> Margrabe Spread Option Model</h3>
+</div>
 </div>
 
 
-<div id="outline-container-orgc8dc24a" class="outline-2">
-<h2 id="orgc8dc24a"><span class="section-number-2">4</span> Data</h2>
+
+<div id="outline-container-org1fdf8cf" class="outline-2">
+<h2 id="org1fdf8cf"><span class="section-number-2">4</span> Data</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Extract only Granville Bank. 
@@ -355,8 +369,8 @@ Extract only Granville Bank.
 </div>
 </div>
 
-<div id="outline-container-org77167e4" class="outline-2">
-<h2 id="org77167e4"><span class="section-number-2">5</span> Python Implementation</h2>
+<div id="outline-container-orga50ce05" class="outline-2">
+<h2 id="orga50ce05"><span class="section-number-2">5</span> Python Implementation</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Below is a function which will calculate the latest cost of deposit insurance for a given bank.
@@ -376,8 +390,8 @@ Below is a function which will calculate the latest cost of deposit insurance fo
 
 
 
-<div id="outline-container-org3b961aa" class="outline-2">
-<h2 id="org3b961aa"><span class="section-number-2">6</span> References</h2>
+<div id="outline-container-org944a103" class="outline-2">
+<h2 id="org944a103"><span class="section-number-2">6</span> References</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 @article{merton1977analytic,
@@ -396,7 +410,7 @@ Below is a function which will calculate the latest cost of deposit insurance fo
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Matt Brigida</p>
-<p class="date">Created: 2019-11-21 Thu 16:23</p>
+<p class="date">Created: 2019-12-03 Tue 12:30</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
